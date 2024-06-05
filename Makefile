@@ -37,6 +37,6 @@ qemu: ${EXEC}
 gdb: ${EXEC}
 	gdb-multiarch -ex "set architecture arm" \
 		-ex "target extended-remote :1234" \
-		-ex "load"
+		-ex "load" \
 		${EXEC}
 
