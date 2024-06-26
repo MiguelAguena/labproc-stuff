@@ -9,11 +9,12 @@ SECTIONS {
   .data : { *(.data) }
 
   . = ALIGN(4);
-  bss_begin = .;
+  inicio_bss = .;
   .bss : { *(.bss*) }
-  bss_end = .;
+  fim_bss = .;
 
   . = ALIGN(8);
-  . = . + 8K;
-  stack_svr = .;
+  inicio_heap = .;
+  . = . + 32K;
+  inicio_stack = .;
 }

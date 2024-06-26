@@ -6,13 +6,13 @@ start:
     */
    mov r0, #0xd3     // Modo SVC
    msr cpsr_c,r0
-   ldr sp, =stack_svr
+   ldr sp, =inicio_stack
 
    /*
     * Zera segmento BSS
     */
-   ldr r0, =bss_begin
-   ldr r1, =bss_end
+   ldr r0, =inicio_bss
+   ldr r1, =fim_bss
    mov r2, #0
 loop_bss:
    cmp r0, r1

@@ -1,4 +1,4 @@
-FONTES = boot.s teste.c  
+FONTES = boot.s teste.c sbrk.c
 LDSCRIPT = linker.ld
 PROJECT = teste
 
