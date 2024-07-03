@@ -20,6 +20,10 @@ int main(){
     d[2].dia = 27; d[2].mes = 6; d[2].ano = 2024;
     d[3].dia = 28; d[3].mes = 6; d[3].ano = 2024;
 
+    /*Realoca para 1 data*/
+    d = (data *)realloc(d, 1 * sizeof(data));
+    d[0].dia = 29; d[0].mes = 6; d[0].ano = 2024;
+
     // Liberar a memória alocada
     free(d);
     return 0;
